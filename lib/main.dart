@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
         ),
         drawer: SafeArea(child: Drawer(surfaceTintColor: Colors.white)),
         body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 22.0, horizontal: 40),
+          padding: const EdgeInsets.symmetric(vertical: 22.0, horizontal: 32),
           child: Stack(
             children: <Widget>[
               Row(
@@ -82,8 +82,8 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   IconButton(
-                    padding: EdgeInsets.only(left: 16),
-                    icon: Icon(Icons.info, color: Colors.grey, size: 32),
+                    icon: Icon(Icons.info, color: Colors.grey),
+                    iconSize: 32,
                     onPressed: () {},
                   ),
                 ],
