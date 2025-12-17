@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:handbook/widgets/search_bar.dart';
 import 'extensions/SpacedBy.dart';
+import 'widgets/category_card.dart';
 import 'widgets/segment_divider.dart';
 import 'widgets/title_card.dart';
 import 'widgets/topic_card.dart';
@@ -95,6 +96,24 @@ class MainScreen extends StatelessWidget {
               title: 'Graduation Policy',
               preview:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CategoryCard(category: 'Academic Policies and Procedures'),
+                    CategoryCard(category: 'Student Affairs'),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CategoryCard(category: 'Student Programs'),
+                    CategoryCard(category: 'Student Discipline and Formation'),
+                  ],
+                ),
+              ],
             ),
             SegmentDivider(segment: 'Browse by Category'),
           ].spacedBy(25.h),
