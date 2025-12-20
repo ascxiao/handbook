@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:handbook/widgets/topic_chip.dart';
+import 'package:handbook/views/widgets/topic_chip.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../extensions/SpacedBy.dart';
+import '../../extensions/SpacedBy.dart';
 
 class TopicCard extends StatelessWidget {
   final String title;
