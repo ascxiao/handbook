@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gap/gap.dart';
 import 'package:handbook/widgets/search_bar.dart';
 import 'extensions/SpacedBy.dart';
 import 'widgets/category_card.dart';
@@ -8,7 +7,6 @@ import 'widgets/category_list.dart';
 import 'widgets/segment_divider.dart';
 import 'widgets/title_card.dart';
 import 'widgets/topic_card.dart';
-import 'widgets/topic_chip.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +28,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(
               seedColor: Color(0xFF006633),
               brightness: Brightness.light,
-            ),
+            ).copyWith(surface: Colors.white),
           ),
           home: const MainScreen(),
         );
@@ -70,6 +68,23 @@ class MainScreen extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.white),
         centerTitle: false,
         backgroundColor: Theme.of(context).colorScheme.primary,
+      ),
+      bottomNavigationBar: NavigationBar(
+        destinations: [
+          NavigationDestination(
+            icon: Icon(Icons.home, size: 20),
+            label: 'Home',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.menu_book_rounded, size: 48),
+            label: 'Open Handbook',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.star, size: 20),
+            label: 'Saved',
+          ),
+        ],
+        backgroundColor: Theme.of(context).colorScheme.surface,
       ),
       drawer: SafeArea(child: Drawer(surfaceTintColor: Colors.white)),
       body: SingleChildScrollView(
