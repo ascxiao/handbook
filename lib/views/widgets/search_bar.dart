@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SearchBarApp extends StatelessWidget {
+class SearchBarWidget extends StatelessWidget {
   final double width;
   final double height;
+  final double iconSize;
+  final double fontSize;
 
-  const SearchBarApp({super.key, required this.width, required this.height});
+  const SearchBarWidget({
+    super.key,
+    required this.width,
+    required this.height,
+    required this.iconSize,
+    required this.fontSize,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +28,7 @@ class SearchBarApp extends StatelessWidget {
               TextStyle(
                 color: Theme.of(context).colorScheme.tertiary,
                 fontFamily: 'IBM Plex Sans',
-                fontSize: 16.sp,
+                fontSize: fontSize.sp,
               ),
             ),
             elevation: WidgetStateProperty.all(0),
@@ -46,7 +54,7 @@ class SearchBarApp extends StatelessWidget {
             onChanged: (value) {
               controller.openView();
             },
-            trailing: <Widget>[Icon(Icons.search)],
+            trailing: <Widget>[Icon(Icons.search, size: iconSize.r)],
           ),
         );
       },

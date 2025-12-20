@@ -18,9 +18,7 @@ class DrawerWidget extends StatelessWidget {
                   onPressed: () {
                     darkModeNotifier.value = !darkModeNotifier.value;
                   },
-                  icon: darkModeNotifier.value
-                      ? Icon(Icons.dark_mode)
-                      : Icon(Icons.light_mode),
+                  icon: isDark ? Icon(Icons.dark_mode) : Icon(Icons.light_mode),
                 );
               },
             ),

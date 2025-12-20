@@ -21,7 +21,12 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SearchBarApp(width: 263, height: 58),
+                SearchBarWidget(
+                  width: 263.w,
+                  height: 58.h,
+                  fontSize: 16,
+                  iconSize: 32,
+                ),
                 IconButton(
                   icon: Icon(Icons.info, color: Colors.grey),
                   iconSize: 32.r,
