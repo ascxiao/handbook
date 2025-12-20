@@ -11,7 +11,7 @@ class CategoryListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surface,
+        color: Theme.of(context).colorScheme.surfaceContainerLow,
         borderRadius: BorderRadius.circular(8.r),
         boxShadow: [
           BoxShadow(color: Colors.black12, blurRadius: 5.r, spreadRadius: 1.r),

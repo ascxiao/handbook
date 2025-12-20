@@ -34,7 +34,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       ],
       iconTheme: IconThemeData(color: Colors.white),
       centerTitle: false,
-      backgroundColor: Theme.of(context).colorScheme.primary,
+      backgroundColor: Theme.of(context).colorScheme.primaryFixed,
     );
   }
 }

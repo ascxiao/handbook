@@ -20,7 +20,7 @@ class TitleCard extends StatelessWidget {
           width: 342.w,
           height: 113.h,
           padding: EdgeInsets.all(16),
-          color: Theme.of(context).colorScheme.surface,
+          color: Theme.of(context).colorScheme.surfaceContainerLow,
           child: Column(
             children: <Widget>[
               Text(

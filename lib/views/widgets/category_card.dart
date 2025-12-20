@@ -18,7 +18,7 @@ class CategoryCard extends StatelessWidget {
           child: Ink(
             width: 150.w,
             padding: EdgeInsets.all(8.r),
-            color: Theme.of(context).colorScheme.surface,
+            color: Theme.of(context).colorScheme.surfaceContainerLow,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
