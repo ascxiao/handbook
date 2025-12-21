@@ -40,6 +40,10 @@ class _ArticlePageState extends State<ArticlePage> {
 
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return Center(child: CircularProgressIndicator());
+    }
+
     if (article == null) {
       return Scaffold(body: Center(child: Text('Article not found')));
     }
