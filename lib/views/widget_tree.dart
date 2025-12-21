@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:handbook/data/notifiers.dart';
 import 'package:handbook/views/pages/article_page.dart';
 import 'package:handbook/views/pages/home_page.dart';
+import 'pages/article_list_page.dart';
 import 'widgets/appbar_widget.dart';
 import 'widgets/drawer_widget.dart';
 import 'widgets/navbar.dart';
 
-List<Widget> pages = [HomePage(), ArticlePage()];
+List<Widget> pages = [HomePage(), ArticleList(), ArticlePage(id: 1)];
 
 class WidgetTree extends StatelessWidget {
   const WidgetTree({super.key});

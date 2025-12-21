@@ -1,17 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:handbook/views/pages/article_page.dart';
 import 'package:handbook/views/widgets/topic_chip.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../extensions/SpacedBy.dart';
 
-class TopicCard extends StatelessWidget {
+class TopicCard extends StatefulWidget {
+  final int id;
   final String title;
   final String preview;
-  //! ADD SOMETHING FOR THE TAGS/CHIPS
+  final IconData icon;
+  final List<String> tags;
 
-  const TopicCard({super.key, required this.title, required this.preview});
+  const TopicCard({
+    super.key,
+    required this.title,
+    required this.preview,
+    required this.tags,
+    required this.icon,
+    required this.id,
+  });
 
+  @override
+  State<TopicCard> createState() => _TopicCardState();
+}
+
+class _TopicCardState extends State<TopicCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -19,11 +34,20 @@ class TopicCard extends StatelessWidget {
       child: InkWell(
         splashColor: Colors.green.withAlpha(30),
         onTap: () {
-          print('Card tapped.');
+          setState(() {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return ArticlePage(id: widget.id);
+                },
+              ),
+            );
+          });
+          ;
         },
         child: Ink(
           width: 342.w,
-          height: 188.h,
           padding: EdgeInsets.all(16),
           color: Theme.of(context).colorScheme.surfaceContainerLow,
           child: Column(
@@ -33,7 +57,7 @@ class TopicCard extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 16.r),
                     child: Icon(
-                      Icons.school_outlined,
+                      widget.icon,
                       size: 32,
                       color: Theme.of(context).colorScheme.primary,
                     ),
@@ -41,7 +65,7 @@ class TopicCard extends StatelessWidget {
                   Wrap(
                     children: [
                       Text(
-                        title,
+                        widget.title,
                         style: TextStyle(
                           fontFamily: 'IBM Plex Sans',
                           fontSize: 20.sp,
@@ -56,28 +80,29 @@ class TopicCard extends StatelessWidget {
               ),
               Wrap(
                 children: [
-                  SizedBox(
-                    height: 54.h,
-                    width: 295.w,
-                    child: Text(
-                      preview,
-                      maxLines: 3,
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                        fontFamily: 'IBM Plex Sans',
-                        fontWeight: FontWeight.w600,
-                        color: Theme.of(context).colorScheme.secondary,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ),
+                  widget.preview != ''
+                      ? SizedBox(
+                          height: 54.h,
+                          width: 295.w,
+                          child: Text(
+                            widget.preview,
+                            maxLines: 3,
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                              fontFamily: 'IBM Plex Sans',
+                              fontWeight: FontWeight.w600,
+                              color: Theme.of(context).colorScheme.secondary,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        )
+                      : SizedBox.shrink(),
                 ],
               ),
-              Gap(24.h),
+              Gap(8.h),
               Row(
                 children: [
-                  Topic(topicName: 'Academics'),
-                  Topic(topicName: 'Academics'),
+                  for (String tag in widget.tags) Topic(topicName: tag),
                 ].spacedBy(8.w),
               ),
             ],

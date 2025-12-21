@@ -41,9 +41,12 @@ class HomePage extends StatelessWidget {
             ),
             SegmentDivider(segment: 'Quick Access'),
             TopicCard(
+              id: 1,
+              icon: Icons.school_outlined,
               title: 'Graduation Policy',
               preview:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              tags: ['Academics', 'Policies'],
             ),
             Column(
               children: [

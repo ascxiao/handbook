@@ -27,6 +27,7 @@ class NavBar extends StatelessWidget {
           ],
           backgroundColor: Theme.of(context).colorScheme.surface,
           onDestinationSelected: (int value) {
+            Navigator.popUntil(context, (route) => route.isFirst);
             selectedPageNotifier.value = value;
           },
           selectedIndex: selectedPage,

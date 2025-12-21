@@ -23,7 +23,7 @@ class Topic extends StatelessWidget {
         color: Theme.of(context).colorScheme.secondary,
         width: 2,
       ),
-      padding: EdgeInsets.all(2.r),
+      padding: EdgeInsets.all(1.r),
     );
   }
 }
