@@ -57,9 +57,9 @@ class _ArticlePageState extends State<ArticlePage> {
             color: Colors.white,
           ),
         ),
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: IconThemeData(color: Theme.of(context).colorScheme.primary),
         centerTitle: false,
-        backgroundColor: Theme.of(context).colorScheme.primaryFixed,
+        backgroundColor: Theme.of(context).colorScheme.onPrimary,
         actions: [
           SearchAnchor(
             builder: (BuildContext context, SearchController controller) {
@@ -70,11 +70,24 @@ class _ArticlePageState extends State<ArticlePage> {
                 icon: Icon(Icons.search),
               );
             },
+            viewBackgroundColor: Theme.of(context).colorScheme.surface,
             suggestionsBuilder:
                 (BuildContext context, SearchController controller) {
                   return List<ListTile>.generate(5, (int index) {
                     final String item = 'item $index';
-                    return ListTile(title: Text(item), onTap: () {});
+                    return ListTile(
+                      leading: Icon(
+                        Icons.school,
+                      ), //! MODIFY THIS SO CATER EACH CATEGORY OF DATA
+                      title: Text(
+                        item,
+                        style: TextStyle(
+                          fontFamily: 'IBM Plex Sans',
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      onTap: () {},
+                    );
                   });
                 },
           ),

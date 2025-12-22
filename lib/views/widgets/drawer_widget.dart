@@ -14,7 +14,7 @@ class DrawerWidget extends StatelessWidget {
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.onPrimary,
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -25,7 +25,7 @@ class DrawerWidget extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'Gilgan',
                       fontSize: 12.sp,
-                      color: Theme.of(context).colorScheme.surface,
+                      color: Colors.white,
                     ),
                     textAlign: TextAlign.center,
                   ),

@@ -61,7 +61,19 @@ class SearchBarWidget extends StatelessWidget {
       suggestionsBuilder: (BuildContext context, SearchController controller) {
         return List<ListTile>.generate(5, (int index) {
           final String item = 'item $index';
-          return ListTile(title: Text(item), onTap: () {});
+          return ListTile(
+            leading: Icon(
+              Icons.school,
+            ), //! MODIFY THIS SO CATER EACH CATEGORY OF DATA
+            title: Text(
+              item,
+              style: TextStyle(
+                fontFamily: 'IBM Plex Sans',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {},
+          );
         });
       },
     );

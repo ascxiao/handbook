@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                     ).copyWith(
                       surfaceBright: Colors.white,
                       surfaceDim: const Color.fromARGB(255, 1, 25, 3),
-                      primaryFixed: const Color.fromARGB(255, 0, 59, 2),
+                      onPrimary: const Color.fromARGB(255, 0, 59, 2),
                     ),
               ),
               home: WidgetTree(),
