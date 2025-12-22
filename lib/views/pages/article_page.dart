@@ -7,8 +7,6 @@ import 'package:handbook/views/widgets/segment_divider.dart';
 import 'package:handbook/views/widgets/topic_chip.dart';
 
 import '../../data/article_service.dart';
-import '../widgets/appbar_widget.dart';
-import '../widgets/drawer_widget.dart';
 import '../widgets/navbar.dart';
 import '../widgets/page_control_widget.dart';
 import '../widgets/related_articles_widget.dart';
