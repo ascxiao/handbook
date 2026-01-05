@@ -5,6 +5,7 @@ import 'package:gap/gap.dart';
 import 'package:handbook/extensions/SpacedBy.dart';
 import 'package:handbook/views/widgets/segment_divider.dart';
 import 'package:handbook/views/widgets/topic_chip.dart';
+import 'package:handbook/data/notifiers.dart';
 
 import '../../data/article_service.dart';
 import '../widgets/navbar.dart';
@@ -31,6 +32,9 @@ class _ArticlePageState extends State<ArticlePage> {
 
   Future<void> loadData() async {
     article = await ArticleService.getArticleByID(widget.id);
+    if (article != null) {
+      isSavedNotifier.value = article!.saved;
+    }
     setState(() {
       isLoading = false;
     });
@@ -100,6 +104,7 @@ class _ArticlePageState extends State<ArticlePage> {
           child: Column(
             children: <Widget>[
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     article!.title,
@@ -110,6 +115,27 @@ class _ArticlePageState extends State<ArticlePage> {
                       color: Theme.of(context).colorScheme.primary,
                     ),
                     textAlign: TextAlign.left,
+                  ),
+                  ValueListenableBuilder(
+                    valueListenable: isSavedNotifier,
+                    builder: (context, isSaved, child) {
+                      return ToggleButtons(
+                        isSelected: [isSaved],
+                        renderBorder: false,
+                        onPressed: (int index) async {
+                          final newValue = !isSavedNotifier.value;
+                          isSavedNotifier.value = newValue;
+                          article!.saved = newValue;
+                          await ArticleService.updateSavedStatus(
+                            article!.id,
+                            newValue,
+                          );
+                        },
+                        children: [
+                          isSaved ? Icon(Icons.star) : Icon(Icons.star_border),
+                        ],
+                      );
+                    },
                   ),
                 ],
               ),

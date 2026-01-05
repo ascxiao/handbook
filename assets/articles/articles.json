@@ -1,26 +1,22 @@
 [
-    {
-        "id": 1,
-        "category": "",
-        "chapter_num": "",
-        "title": "Graduation Policy",
-        "date": "December 3, 2025",
-        "tags": [
-            "Academics",
-            "Policies"
-        ],
-        "content": "### 5.7.1 Academic Requirements\nStudents are responsible for regularly consulting with their respective Department Chairpersons/Deans on policies and requirements concerning graduation. Although the course requirements for the degree program are all specified in the Undergraduate Catalogue, any additional requirements prescribed by the Commission on Higher Education (CHED) must be met by all applicants for graduation.\n\n### 5.7.2 Course Requirements\n* **Residence:** Students must be in residence in USLS for at least four consecutive semesters prior to graduation.\n* **Major Electives:** Sixty percent of the units for major electives must be earned at USLS.\n* **Maximum Duration:** The maximum length of time students are allowed to work for a bachelor’s degree is seven years, counting from the first time they enrol at the University.\n\n### 5.7.3 Honors\nThe following honors are conferred on qualified students upon graduation from a Bachelor’s degree program:\n\n| Honor | GPA | Grade Constraints | Residence |\n| :--- | :--- | :--- | :--- |\n| **Summa Cum Laude** | 1.4 (96) or better | No grade < 2.0 (90) | 6 semesters |\n| **Magna Cum Laude** | 1.7-1.5 (93-95) | No grade < 2.2 (88) | 6 semesters |\n| **Cum Laude** | 1.9-1.8 (91-92) | No grade < 2.5 (85) | 6 semesters |\n\n**Academic Achievement Award**\nTo graduating students with a grade point average of 91 or higher, no grade below 81 (2.9) and with a grade of 81-84 for a maximum of three (3) subjects/courses only.\n\n#### **Important Notes (N.B.)**\n* **NSTP:** Although grades in NSTP are not included in the GPA computation, a student applying for honors should have a grade of 3.0 (80) or better in this subject.\n* **External Grades:** Grades earned in other schools are included in the computation for honors.\n* **Double Majors/Shiftees:** In case of double majors (e.g. LiaCom) or shiftees, a grade lower than the cut-off for honors in any subject will automatically disqualify the student.\n* **Repeated Courses:** A student who repeats a course to meet retention requirements is disqualified from any honors.\n* **Full History:** All courses taken for the duration of a student’s program of study, including courses taken in other schools as well as courses enrolled with the university under another program, will be considered in the computation of the grade-point average (GPA).\n* **Disqualifying Marks:** Grades or Remarks of **WITHDRAWN (W)**, **Incomplete (INC)**, **No Appearance (N.A.)**, or **Dropped (DRP/D)** in the Transcript of Records disqualify the student for honors.\n\n### 5.7.4 The Commencement Program\nThe List of Candidates for graduation is posted on the Bulletin Board one (1) month prior to graduation day. A graduating student is responsible for ensuring that his/her name is included in the Commencement Program.\n\n> **Disclaimer:** The inclusion of a student’s name in the Commencement Program does not guarantee graduation unless all degree requirements of the University of St. La Salle and the Commission on Higher Education (CHED) have been met.\n\nThe University reserves the right to deny a student from participating in the Graduation Rites if found to have violated any University Rules and Regulations."
-    },
-    {
-        "id": 2,
-        "category": "",
-        "chapter_num": "",
-        "title": "Graduation MEOWWW",
-        "date": "December 3, 2025",
-        "tags": [
-            "Academics",
-            "Policies"
-        ],
-        "content": "# Hello\n\nThis is **markdown** content"
-    }
+  {
+    "id": 1,
+    "category": "",
+    "chapter_num": "",
+    "title": "Graduation Policy",
+    "date": "December 3, 2025",
+    "tags": ["Academics", "Policies"],
+    "saved": false,
+    "content": "### 5.7.1 Academic Requirements\nStudents are responsible for regularly consulting with their respective Department Chairpersons/Deans on policies and requirements concerning graduation. Although the course requirements for the degree program are all specified in the Undergraduate Catalogue, any additional requirements prescribed by the Commission on Higher Education (CHED) must be met by all applicants for graduation.\n\n### 5.7.2 Course Requirements\n* **Residence:** Students must be in residence in USLS for at least four consecutive semesters prior to graduation.\n* **Major Electives:** Sixty percent of the units for major electives must be earned at USLS.\n* **Maximum Duration:** The maximum length of time students are allowed to work for a bachelor’s degree is seven years, counting from the first time they enrol at the University.\n\n### 5.7.3 Honors\nThe following honors are conferred on qualified students upon graduation from a Bachelor’s degree program:\n\n| Honor | GPA | Grade Constraints | Residence |\n| :--- | :--- | :--- | :--- |\n| **Summa Cum Laude** | 1.4 (96) or better | No grade < 2.0 (90) | 6 semesters |\n| **Magna Cum Laude** | 1.7-1.5 (93-95) | No grade < 2.2 (88) | 6 semesters |\n| **Cum Laude** | 1.9-1.8 (91-92) | No grade < 2.5 (85) | 6 semesters |\n\n**Academic Achievement Award**\nTo graduating students with a grade point average of 91 or higher, no grade below 81 (2.9) and with a grade of 81-84 for a maximum of three (3) subjects/courses only.\n\n#### **Important Notes (N.B.)**\n* **NSTP:** Although grades in NSTP are not included in the GPA computation, a student applying for honors should have a grade of 3.0 (80) or better in this subject.\n* **External Grades:** Grades earned in other schools are included in the computation for honors.\n* **Double Majors/Shiftees:** In case of double majors (e.g. LiaCom) or shiftees, a grade lower than the cut-off for honors in any subject will automatically disqualify the student.\n* **Repeated Courses:** A student who repeats a course to meet retention requirements is disqualified from any honors.\n* **Full History:** All courses taken for the duration of a student’s program of study, including courses taken in other schools as well as courses enrolled with the university under another program, will be considered in the computation of the grade-point average (GPA).\n* **Disqualifying Marks:** Grades or Remarks of **WITHDRAWN (W)**, **Incomplete (INC)**, **No Appearance (N.A.)**, or **Dropped (DRP/D)** in the Transcript of Records disqualify the student for honors.\n\n### 5.7.4 The Commencement Program\nThe List of Candidates for graduation is posted on the Bulletin Board one (1) month prior to graduation day. A graduating student is responsible for ensuring that his/her name is included in the Commencement Program.\n\n> **Disclaimer:** The inclusion of a student’s name in the Commencement Program does not guarantee graduation unless all degree requirements of the University of St. La Salle and the Commission on Higher Education (CHED) have been met.\n\nThe University reserves the right to deny a student from participating in the Graduation Rites if found to have violated any University Rules and Regulations."
+  },
+  {
+    "id": 2,
+    "category": "",
+    "chapter_num": "",
+    "title": "Graduation MEOWWW",
+    "date": "December 3, 2025",
+    "tags": ["Academics", "Policies"],
+    "saved": false,
+    "content": "# Hello\n\nThis is **markdown** content"
+  }
 ]

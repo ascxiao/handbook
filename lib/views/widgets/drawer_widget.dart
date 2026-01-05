@@ -21,7 +21,7 @@ class DrawerWidget extends StatelessWidget {
                 children: [
                   Image.asset('assets/images/usls.png', height: 50),
                   Text(
-                    'The Official Mobile Handbook of USLS ems',
+                    'The Official Mobile Handbook of USLS',
                     style: TextStyle(
                       fontFamily: 'Gilgan',
                       fontSize: 12.sp,
