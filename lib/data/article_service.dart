@@ -78,6 +78,15 @@ class ArticleService {
     return jsonList.map((json) => Article.fromJson(json)).toList();
   }
 
+  static Future<List<Article>> loadSavedArticles() async {
+    String jsonString = await _getArticlesJson();
+    List<dynamic> jsonList = json.decode(jsonString);
+    return jsonList
+        .map((json) => Article.fromJson(json))
+        .where((article) => article.saved == true)
+        .toList();
+  }
+
   static Future<Article?> getArticleByID(int id) async {
     String jsonString = await _getArticlesJson();
     List<dynamic> jsonList = json.decode(jsonString);
@@ -107,8 +116,11 @@ class ArticleService {
       // Write back to local file
       final file = await _getLocalFile();
       await file.writeAsString(JsonEncoder.withIndent('  ').convert(jsonList));
+      print('Successfully updated article $id saved status to $saved');
+      print('File path: ${file.path}');
     } catch (e) {
       print('Error updating saved status: $e');
+      rethrow;
     }
   }
 }

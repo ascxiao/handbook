@@ -34,7 +34,7 @@ class _ArticleListState extends State<ArticleList> {
       itemCount: articles.length,
       itemBuilder: (context, index) {
         return TopicCard(
-          id: 1,
+          id: articles[index].id,
           icon: Icons.school_outlined,
           title: articles[index].title,
           preview: '',

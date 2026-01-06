@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:handbook/data/notifiers.dart';
+import 'package:handbook/views/pages/faq_list.dart';
 
-class DrawerWidget extends StatelessWidget {
+class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
 
+  @override
+  State<DrawerWidget> createState() => _DrawerWidgetState();
+}
+
+class _DrawerWidgetState extends State<DrawerWidget> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -52,6 +58,18 @@ class DrawerWidget extends StatelessWidget {
                 style: TextStyle(fontFamily: 'IBM Plex Sans'),
               ),
               leading: Icon(Icons.question_mark),
+              onTap: () {
+                setState(() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return FaqList();
+                      },
+                    ),
+                  );
+                });
+              },
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),

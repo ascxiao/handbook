@@ -109,7 +109,7 @@ class _ArticlePageState extends State<ArticlePage> {
                   Text(
                     article!.title,
                     style: TextStyle(
-                      fontSize: 30.sp,
+                      fontSize: 24.sp,
                       fontFamily: 'IBM Plex Sans',
                       fontWeight: FontWeight.bold,
                       color: Theme.of(context).colorScheme.primary,
