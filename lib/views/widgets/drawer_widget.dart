@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:handbook/data/notifiers.dart';
+import 'package:handbook/views/pages/directory_list.dart';
 import 'package:handbook/views/pages/faq_list.dart';
 
 class DrawerWidget extends StatefulWidget {
@@ -44,6 +45,18 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 style: TextStyle(fontFamily: 'IBM Plex Sans'),
               ),
               leading: Icon(Icons.phone),
+              onTap: () {
+                setState(() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return DirectoryList();
+                      },
+                    ),
+                  );
+                });
+              },
             ),
             ListTile(
               title: Text(
